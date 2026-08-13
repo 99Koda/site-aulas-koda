@@ -29,8 +29,8 @@ button, input, select, textarea { font: inherit; }
 nav { display: flex; gap: 28px; color: var(--muted); font-size: .9rem; }
 nav a:hover { color: var(--text); }
 .discord-small {
-  width: 42px;
-  height: 42px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
