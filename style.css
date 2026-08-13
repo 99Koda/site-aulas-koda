@@ -50,7 +50,11 @@ nav a:hover { color: var(--text); }
   height: 16px;
   fill: currentColor;
 }
-
+.discord-small img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
 .discord-small:hover {
   color: var(--accent);
   border-color: var(--accent);
