@@ -51,8 +51,8 @@ nav a:hover { color: var(--text); }
   fill: currentColor;
 }
 .discord-small img {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
 }
 .discord-small:hover {
