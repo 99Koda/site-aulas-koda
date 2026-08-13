@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KODA — Aulas de League of Legends</title>
+  <meta name="description" content="Aulas, análises e acompanhamento para evoluir no League of Legends.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#inicio">KODA<span>.</span></a>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#agendar">Agendar</a>
+    </nav>
+    <button class="discord-small" onclick="copyDiscord()">Discord</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">COACHING • ANÁLISE • EVOLUÇÃO</p>
+        <h1>Pare de jogar no automático.<br><span>Comece a entender o jogo.</span></h1>
+        <p class="hero-text">Aulas e análises individuais de League of Legends, focadas nos seus erros, decisões e no que realmente pode fazer você evoluir.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#servicos">Ver serviços</a>
+          <a class="btn secondary" href="#agendar">Agendar aula</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="rank-orb">K</div>
+        <p>COACHING INDIVIDUAL</p>
+        <strong>Foco total em você.</strong>
+        <small>Micro • Macro • Tracking • Wave • Trades • Teamfights</small>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">ESCOLHA SEU CAMINHO</p>
+        <h2>Serviços</h2>
+      </div>
+
+      <div class="cards">
+        <article class="service">
+          <div class="service-top"><span>01</span><span class="price">R$ 4,99</span></div>
+          <h3>Análise de OP.GG</h3>
+          <p>Análise rápida, mas eficiente, do seu perfil. Vamos interpretar seus dados, comparar informações e encontrar o foco que pode trazer uma melhora imediata.</p>
+          <div class="duration">⏱ 15 minutos • ao vivo</div>
+          <button class="choose" onclick="selectService('Análise de OP.GG — R$ 4,99')">Escolher</button>
+        </article>
+
+        <article class="service featured">
+          <div class="service-top"><span>02</span><span class="price">R$ 19,99</span></div>
+          <h3>VOD Review</h3>
+          <p>Análise completa de uma partida escolhida por você: pontos bons e ruins, decisões, builds, runas e o que poderia ter mudado seu desempenho.</p>
+          <div class="duration">⏱ Duração variável • ao vivo</div>
+          <button class="choose" onclick="selectService('VOD Review — R$ 19,99')">Escolher</button>
+        </article>
+
+        <article class="service">
+          <div class="service-top"><span>03</span><span class="price">R$ 39,99</span></div>
+          <h3>Aula Premium</h3>
+          <p>Uma análise completa do seu perfil como jogador e um plano de melhora imediato, trabalhando micro, macro, tracking, posicionamento, visão, rotação, wave, trades e teamfights.</p>
+          <div class="duration">⏱ 1 hora • individual</div>
+          <button class="choose" onclick="selectService('Aula Premium — R$ 39,99')">Escolher</button>
+        </article>
+
+        <article class="service">
+          <div class="service-top"><span>04</span><span class="price">R$ 99,99</span></div>
+          <h3>Acompanhamento Semanal</h3>
+          <p>Duas aulas de 1 hora com 2–3 dias de intervalo, exercícios entre elas e acompanhamento para dúvidas, builds, runas, tracking, decisões e evolução.</p>
+          <div class="duration">⏱ 2 × 1 hora • semanal</div>
+          <button class="choose" onclick="selectService('Acompanhamento Semanal — R$ 99,99')">Escolher</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section process">
+      <div class="section-heading">
+        <p class="eyebrow">SEM COMPLICAÇÃO</p>
+        <h2>Como funciona</h2>
+      </div>
+      <div class="steps">
+        <div><span>01</span><h3>Escolha</h3><p>Selecione o serviço que mais combina com o que você precisa.</p></div>
+        <div><span>02</span><h3>Solicite</h3><p>Informe seu Discord e o horário que você gostaria de fazer a call.</p></div>
+        <div><span>03</span><h3>Pagamento</h3><p>Faça o pagamento via Pix após combinar o horário.</p></div>
+        <div><span>04</span><h3>Call</h3><p>Entramos no Discord e trabalhamos diretamente nos seus pontos de melhoria.</p></div>
+      </div>
+    </section>
+
+    <section id="agendar" class="section booking">
+      <div class="booking-copy">
+        <p class="eyebrow">VAMOS EVOLUIR</p>
+        <h2>Solicite sua aula.</h2>
+        <p>Preencha os dados. O site vai montar uma mensagem pronta para você enviar ao Koda no Discord.</p>
+        <div class="discord-box">
+          <span>Discord</span>
+          <strong>99koda</strong>
+          <button onclick="copyDiscord()">Copiar usuário</button>
+        </div>
+      </div>
+
+      <form id="bookingForm" class="form">
+        <label>Serviço
+          <select id="service" required>
+            <option value="">Selecione um serviço</option>
+            <option>Análise de OP.GG — R$ 4,99</option>
+            <option>VOD Review — R$ 19,99</option>
+            <option>Aula Premium — R$ 39,99</option>
+            <option>Acompanhamento Semanal — R$ 99,99</option>
+          </select>
+        </label>
+        <label>Seu nome / nick
+          <input id="name" type="text" placeholder="Ex.: KodaFan" required>
+        </label>
+        <label>Seu Discord
+          <input id="studentDiscord" type="text" placeholder="Ex.: jogador123" required>
+        </label>
+        <label>Data desejada
+          <input id="date" type="date" required>
+        </label>
+        <label>Horário desejado
+          <input id="time" type="time" required>
+        </label>
+        <label>Observação (opcional)
+          <textarea id="note" rows="3" placeholder="Ex.: Quero focar em lane phase e controle de wave."></textarea>
+        </label>
+        <button class="btn primary submit" type="submit">Gerar solicitação</button>
+        <div id="result" class="result" hidden>
+          <p>Solicitação pronta! Copie a mensagem e envie para <strong>99koda</strong> no Discord.</p>
+          <textarea id="message" rows="8" readonly></textarea>
+          <button type="button" class="btn secondary" onclick="copyMessage()">Copiar mensagem</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">KODA<span>.</span></div>
+    <p>League of Legends coaching • Discord: 99koda</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
