@@ -28,19 +28,7 @@ button, input, select, textarea { font: inherit; }
 .logo span { color: var(--accent); }
 nav { display: flex; gap: 28px; color: var(--muted); font-size: .9rem; }
 nav a:hover { color: var(--text); }
-.discord-small {
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: .2s ease;
-}
+
 
 .discord-small svg {
   width: 16px;
